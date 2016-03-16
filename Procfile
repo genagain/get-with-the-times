@@ -1,2 +1,2 @@
 web: gunicorn app.register:app
-web: gunicorn app:registration_form
+web: gunicorn app.registration_form
