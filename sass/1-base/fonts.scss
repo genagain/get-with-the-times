@@ -1,0 +1,58 @@
+/* Futura LT Bold */
+
+@font-face {
+  font-family: 'futura-lt-bold';
+  src: url('../fonts/futura-lt-bold/futura-lt-bold.eot');
+  src: url('../fonts/futura-lt-bold/futura-lt-bold.woff') format('woff'),
+       url('../fonts/futura-lt-bold/futura-lt-bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Futura LT Bold Oblique */
+
+@font-face {
+  font-family: 'futura-lt-bold';
+  src: url('../fonts/futura-lt-bold-oblique/futura-lt-bold-oblique.eot');
+  src: url('../fonts/futura-lt-bold-oblique/futura-lt-bold-oblique.woff') format('woff'),
+       url('../fonts/futura-lt-bold-oblique/futura-lt-bold-oblique.ttf') format('truetype');
+  font-weight: normal;
+  font-style: oblique;
+}
+
+/* Futura LT Extra Bold */
+
+@font-face {
+  font-family: 'futura-lt-bold';
+  src: url('../fonts/futura-lt-extrabold/futura-lt-extrabold.eot');
+  src: url('../fonts/futura-lt-extrabold/futura-lt-extrabold.woff') format('woff'),
+       url('../fonts/futura-lt-extrabold/futura-lt-extrabold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Futura LT Extra Bold Oblique */
+
+@font-face {
+  font-family: 'futura-lt-bold';
+  src: url('../fonts/futura-lt-extrabold-oblique/futura-lt-extrabold-oblique.eot');
+  src: url('../fonts/futura-lt-extrabold-oblique/futura-lt-extrabold-oblique.woff') format('woff'),
+       url('../fonts/futura-lt-extrabold-oblique/futura-lt-extrabold-oblique.ttf') format('truetype');
+  font-weight: bold;
+  font-style: oblique;
+}
+
+
+/* League Spartan */
+
+@font-face {
+    font-family: 'League Spartan';
+    src: url('../fonts/leaguespartan/leaguespartan-bold.eot');
+    src: url('../fonts/leaguespartan/leaguespartan-bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/leaguespartan/leaguespartan-bold.woff2') format('woff2'),
+         url('../fonts/leaguespartan/leaguespartan-bold.woff') format('woff'),
+         url('../fonts/leaguespartan/leaguespartan-bold.ttf') format('truetype'),
+         url('../fonts/leaguespartan/leaguespartan-bold.svg#league_spartanbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
