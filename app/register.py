@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from registration_form import RegistrationForm
+from .registration_form import RegistrationForm
 
 app = Flask(__name__)
 
