@@ -1,0 +1,153 @@
+footer.site-footer
+  height: 580px
+  background-color: $blue
+  color: white
+
+  .footer-content__container
+    max-width: 960px
+    margin: 0 auto
+    padding: 20px 30px
+
+    .row-wide
+      padding: 15px 0
+
+      h2.cta
+        font-size: 30px
+
+      input
+        background: $orange
+        border: solid 3px $orange
+        color: white
+        padding: 8px 0
+        font:
+          size: 18px
+          family: futura-lt-bold, futura, helvetica, sans-serif
+          weight: normal
+          style: normal
+
+        &:focus,
+        &:active
+          outline: none
+
+        &[type="text"],
+        &[type="email"]
+          width: 380px
+          background: none
+          border: none
+          border-bottom: solid 3px white
+          +transition
+
+          &:focus
+            border-bottom: solid 3px $orange
+
+        &[type="submit"]
+          margin-left: 50%
+          transform: translateX(-50%)
+          padding: 8px 100px
+          font-style: oblique
+          &:active
+            margin-top: 2px
+          &:hover
+            background: lighten($orange, 2%)
+            border: solid 3px lighten($orange, 2%)
+            box-shadow: 1px 1px 40px 20px rgba(0,0,0,0.02)
+
+  .input-group
+    display: inline-block
+    margin: 0px 20px 50px 0px
+    position: relative
+    width: 47.3%
+    float: left
+
+    input
+      padding: -15px 0px
+
+    label
+      +position(absolute, 50% null null 0px)
+      +transform(translateY(-50%))
+      font:
+        family: futura-lt-bold, futura, helvetica, sans-serif
+        style: italic
+      color: white
+      pointer-events: none
+      +transition
+
+    input:focus + label,
+    input.has-value + label
+      top: -10px
+      font-size: 12px
+      color: rgba(255,255,255,0.5)
+
+.col-2
+  display: inline-block
+  margin: 0
+  position: relative
+  width: 50%
+  height: 100px
+  float: left
+
+  .logo
+
+
+    h1
+      color: white
+      text-transform: uppercase
+      font:
+        family: futura-lt-bold, Futura, helvetica, sans-serif
+        size: 24px
+        weight: normal
+        style: oblique
+      line-height: 1.3
+      letter-spacing: .7px
+
+      span.get
+        display: inline-block
+        margin-bottom: 10px
+        padding: 0 15px 0 10px
+        white-space: nowrap
+        overflow: hidden
+
+
+      span.america
+        display: inline-block
+        margin-left: 130px
+        transform: translateY(-20%)
+        padding: 0 10px 0 10px
+
+  .copyright
+    +position(absolute, null 0 0 null)
+
+  .socials
+    display: none
+    h2
+      color: white
+      text-transform: uppercase
+      font:
+        family: futura-lt-bold, Futura, helvetica, sans-serif
+        size: 24px
+        weight: normal
+        style: oblique
+      line-height: 1.3
+      letter-spacing: .7px
+      span
+        display: inline-block
+        margin-bottom: 10px
+        padding: 0 15px 0 10px
+        white-space: nowrap
+        overflow: hidden
+    ul.social-links
+      list-style: none
+      padding: 0
+      font:
+        family: futura-lt-bold, futura, helvetica, sans-serif
+        weight: normal
+        style: oblique
+        color: white
+      li
+        display: inline-block
+        padding: 0
+        margin: 0
+        a:visited
+          color: white
+        a:hover
+          border-bottom: solid 6px white
