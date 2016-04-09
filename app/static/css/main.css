@@ -2730,7 +2730,8 @@ button {
   font-size: 1.6rem;
   color: #f37664;
   border: 3px solid #f37664;
-  padding: .6em 2em; }
+  padding: .6em 2em;
+  outline: none; }
   .cta-primary:hover {
     background: #f37664;
     color: white; }
@@ -2748,7 +2749,8 @@ button {
   padding: .5em 1em;
   border: 3px solid #f37664;
   -webkit-transition: all 80ms ease-in-out;
-  transition: all 80ms ease-in-out; }
+  transition: all 80ms ease-in-out;
+  outline: none; }
   .cta-secondary:hover {
     color: white;
     background: #f37664; }
@@ -3293,7 +3295,7 @@ section.section-1925 .section-content {
       section.section-1925 .section-content .figure {
         right: 1rem;
         width: 52rem;
-        height: 64rem; } }
+        height: 58rem; } }
   @media (min-width: 700px) and (min-width: 900px) {
     section.section-1925 .section-content .figure {
       width: 50rem;
@@ -3444,8 +3446,8 @@ section.section-1945 .section-content {
   @media (min-width: 350px) and (min-width: 700px) and (min-width: 900px) {
     section.section-1945 .section-content .bg {
       right: 3rem;
-      width: 62rem;
-      height: 54rem; } }
+      width: 54rem;
+      height: 50rem; } }
   section.section-1945 .section-content .figure {
     width: 37rem;
     height: 30rem;
@@ -3458,11 +3460,11 @@ section.section-1945 .section-content {
     @media (min-width: 700px) {
       section.section-1945 .section-content .figure {
         width: 48rem;
-        height: 54rem; } }
+        height: 40rem; } }
   @media (min-width: 700px) and (min-width: 900px) {
     section.section-1945 .section-content .figure {
-      width: 70rem;
-      height: 84rem; } }
+      width: 68rem;
+      height: 60rem; } }
   section.section-1945 .section-content .tagline {
     width: 23rem; }
     @media (min-width: 700px) {
@@ -3523,7 +3525,7 @@ section.section-1950 .section-content {
     section.section-1950 .section-content .bg {
       left: 3rem;
       width: 50rem;
-      height: 60rem; } }
+      height: 54rem; } }
   section.section-1950 .section-content .figure {
     width: 36rem;
     height: 32rem;
@@ -3536,12 +3538,12 @@ section.section-1950 .section-content {
     @media (min-width: 700px) {
       section.section-1950 .section-content .figure {
         right: 1rem;
-        width: 45rem;
-        height: 85rem; } }
+        width: 42rem;
+        height: 50rem; } }
   @media (min-width: 700px) and (min-width: 900px) {
     section.section-1950 .section-content .figure {
       width: 50rem;
-      height: 110rem; } }
+      height: 60rem; } }
   section.section-1950 .section-content .tagline {
     width: 23rem; }
     @media (min-width: 700px) {
@@ -3595,7 +3597,7 @@ section.section-1963 .section-content {
   @media (min-width: 350px) and (min-width: 700px) {
     section.section-1963 .section-content .bg {
       width: 48rem;
-      height: 36rem; } }
+      height: 33rem; } }
   @media (min-width: 350px) and (min-width: 700px) and (min-width: 900px) {
     section.section-1963 .section-content .bg {
       right: 3rem;
@@ -3618,12 +3620,12 @@ section.section-1963 .section-content {
   @media (min-width: 350px) and (min-width: 700px) {
     section.section-1963 .section-content .figure {
       width: 55rem;
-      height: 62rem;
+      height: 32rem;
       right: -4rem; } }
   @media (min-width: 350px) and (min-width: 700px) and (min-width: 900px) {
     section.section-1963 .section-content .figure {
       width: 72rem;
-      height: 96rem; } }
+      height: 46rem; } }
   section.section-1963 .section-content .tagline {
     display: none;
     width: 23rem; }
@@ -3640,7 +3642,7 @@ section.section-1963 .section-content {
       height: 5rem;
       right: 0rem;
       left: auto;
-      top: 10rem; }
+      top: 5rem; }
       section.section-1963 .section-content .tagline h2 {
         font-size: 4rem; } }
     section.section-1963 .section-content .tagline span.line2 {
@@ -3681,12 +3683,12 @@ section.section-1975 .section-content {
   @media (min-width: 350px) and (min-width: 700px) {
     section.section-1975 .section-content .bg {
       width: 42rem;
-      height: 60rem; } }
+      height: 42rem; } }
   @media (min-width: 350px) and (min-width: 700px) and (min-width: 900px) {
     section.section-1975 .section-content .bg {
       left: 3rem;
       width: 50rem;
-      height: 70rem; } }
+      height: 50rem; } }
   section.section-1975 .section-content .figure {
     width: 36rem;
     height: 32rem;
@@ -3700,11 +3702,12 @@ section.section-1975 .section-content {
       section.section-1975 .section-content .figure {
         right: 1rem;
         width: 45rem;
-        height: 125rem; } }
+        height: 56rem; } }
   @media (min-width: 700px) and (min-width: 900px) {
     section.section-1975 .section-content .figure {
+      left: -1rem;
       width: 60rem;
-      height: 170rem; } }
+      height: 64rem; } }
   section.section-1975 .section-content .tagline {
     right: 0;
     width: 27rem; }
@@ -3716,10 +3719,7 @@ section.section-1975 .section-content {
       width: 54rem;
       height: 5rem;
       right: 5rem;
-      bottom: null;
-      top: 50%;
-      -webkit-transform: translateY(-50%);
-              transform: translateY(-50%); }
+      bottom: 8rem; }
       section.section-1975 .section-content .tagline h2 {
         font-size: 4rem; } }
     section.section-1975 .section-content .tagline span.line2 {
@@ -3762,7 +3762,7 @@ section.section-1987 .section-content {
     section.section-1987 .section-content .bg {
       right: 3rem;
       width: 62rem;
-      height: 54rem; } }
+      height: 40rem; } }
   section.section-1987 .section-content .figure {
     width: 30rem;
     height: 20rem;
@@ -3774,12 +3774,13 @@ section.section-1987 .section-content {
     right: -2rem; }
     @media (min-width: 700px) {
       section.section-1987 .section-content .figure {
+        bottom: .5rem;
         width: 48rem;
-        height: 54rem; } }
+        height: 32rem; } }
   @media (min-width: 700px) and (min-width: 900px) {
     section.section-1987 .section-content .figure {
       width: 70rem;
-      height: 84rem; } }
+      height: 50rem; } }
   section.section-1987 .section-content .tagline {
     width: 23rem; }
     @media (min-width: 700px) {
