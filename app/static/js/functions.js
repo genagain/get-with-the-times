@@ -49,18 +49,23 @@ var tl = new TimelineLite();
 
 tl.from("h2.headline", .6, {opacity:0, ease:Power4.easeOut, delay:.3})
 .from("h3.headline-cta", .6, {opacity:0, ease:Power4.easeOut}, "-=0.25")
-.from("button.cta-primary, .row span", .6, {opacity:0, ease:Power4.easeOut}, "-=0.25");
+.from("a.cta-primary, .row span", .6, {opacity:0, ease:Power4.easeOut}, "-=0.25");
 
 
 
 
 
-// Parallaxing elements
+// init ScrollMagic controller
 
 var controller = new ScrollMagic.Controller();
 
 
+
+
+
 // 1909
+
+// Parallaxing
 var scene = new ScrollMagic.Scene({
   triggerElement: ".section-1909",
   triggerHook: "onEnter",
@@ -83,6 +88,8 @@ var scene = new ScrollMagic.Scene({
   })
   .addTo(controller);
 
+// Landing Element animations
+
 var tlSection = new TimelineLite();
   tlSection.staggerFrom(".section-1909 .year span", .4, {
     opacity:0,
@@ -103,7 +110,7 @@ var scene = new ScrollMagic.Scene({
   triggerElement: ".section-1909",
 })
  .setTween(tlSection)
- .addIndicators()
+
  .addTo(controller)
 
 
@@ -111,6 +118,8 @@ var scene = new ScrollMagic.Scene({
 
 
 // 1911
+
+// Parallaxing
 var scene = new ScrollMagic.Scene({
   triggerElement: ".section-1911",
   triggerHook: "onEnter",
@@ -133,7 +142,33 @@ var scene = new ScrollMagic.Scene({
   })
   .addTo(controller);
 
+// Landing Element animations
+var tlSection = new TimelineLite();
+  tlSection.staggerFrom(".section-1911 .year span", .4, {
+    opacity:0,
+    top: 200,
+    ease:Power3.easeOut}, 0.15)
+
+  .from(".section-1911 .fact", .4, {
+    opacity:0,
+    x:-200,
+    ease:Back.easeOut})
+
+  .staggerFrom(".section-1911 .tagline span", .6, {
+    opacity:0,
+    x:200,
+    ease:Power4.easeOut}, 0.2)
+
+var scene = new ScrollMagic.Scene({
+  triggerElement: ".section-1911",
+})
+ .setTween(tlSection)
+
+ .addTo(controller)
+
+
 // 1925
+// parallax
 var scene = new ScrollMagic.Scene({
   triggerElement: ".section-1925",
   triggerHook: "onEnter",
@@ -156,7 +191,34 @@ var scene = new ScrollMagic.Scene({
   })
   .addTo(controller);
 
+// Landing Element animations
+var tlSection = new TimelineLite();
+  tlSection.staggerFrom(".section-1925 .year span", .4, {
+    opacity:0,
+    top: 200,
+    ease:Power3.easeOut}, 0.15)
+
+  .from(".section-1925 .fact", .4, {
+    opacity:0,
+    x:-200,
+    ease:Back.easeOut})
+
+  .staggerFrom(".section-1925 .tagline span", .6, {
+    opacity:0,
+    x:200,
+    ease:Power4.easeOut}, 0.2)
+
+var scene = new ScrollMagic.Scene({
+  triggerElement: ".section-1925",
+})
+ .setTween(tlSection)
+
+ .addTo(controller)
+
+
+
 // 1936
+// parallax
 var scene = new ScrollMagic.Scene({
   triggerElement: ".section-1936",
   triggerHook: "onEnter",
@@ -179,7 +241,35 @@ var scene = new ScrollMagic.Scene({
   })
   .addTo(controller);
 
+// Landing Element animations
+
+var tlSection = new TimelineLite();
+  tlSection.staggerFrom(".section-1936 .year span", .4, {
+    opacity:0,
+    top: 200,
+    ease:Power3.easeOut}, 0.15)
+
+  .from(".section-1936 .fact", .4, {
+    opacity:0,
+    x:-200,
+    ease:Back.easeOut})
+
+  .staggerFrom(".section-1936 .tagline span", .6, {
+    opacity:0,
+    x:200,
+    ease:Power4.easeOut}, 0.2)
+
+var scene = new ScrollMagic.Scene({
+  triggerElement: ".section-1936",
+})
+ .setTween(tlSection)
+
+ .addTo(controller)
+
+
+
 // 1945
+// parallax
 var scene = new ScrollMagic.Scene({
   triggerElement: ".section-1945",
   triggerHook: "onEnter",
@@ -202,7 +292,32 @@ var scene = new ScrollMagic.Scene({
   })
   .addTo(controller);
 
+// Landing Element animations
+var tlSection = new TimelineLite();
+  tlSection.staggerFrom(".section-1945 .year span", .4, {
+    opacity:0,
+    top: 200,
+    ease:Power3.easeOut}, 0.15)
+
+  .from(".section-1945 .fact", .4, {
+    opacity:0,
+    x:-200,
+    ease:Back.easeOut})
+
+  .staggerFrom(".section-1945 .tagline span", .6, {
+    opacity:0,
+    x:200,
+    ease:Power4.easeOut}, 0.2)
+
+var scene = new ScrollMagic.Scene({
+  triggerElement: ".section-1945",
+})
+ .setTween(tlSection)
+
+ .addTo(controller)
+
 // 1950
+// parallax
 var scene = new ScrollMagic.Scene({
   triggerElement: ".section-1950",
   triggerHook: "onEnter",
@@ -225,7 +340,33 @@ var scene = new ScrollMagic.Scene({
   })
   .addTo(controller);
 
+// Landing Element animations
+var tlSection = new TimelineLite();
+  tlSection.staggerFrom(".section-1950 .year span", .4, {
+    opacity:0,
+    top: 200,
+    ease:Power3.easeOut}, 0.15)
+
+  .from(".section-1950 .fact", .4, {
+    opacity:0,
+    x:-200,
+    ease:Back.easeOut})
+
+  .staggerFrom(".section-1950 .tagline span", .6, {
+    opacity:0,
+    x:200,
+    ease:Power4.easeOut}, 0.2)
+
+var scene = new ScrollMagic.Scene({
+  triggerElement: ".section-1950",
+})
+ .setTween(tlSection)
+
+ .addTo(controller)
+
+
 // 1963
+// parallax
 var scene = new ScrollMagic.Scene({
   triggerElement: ".section-1963",
   triggerHook: "onEnter",
@@ -248,8 +389,34 @@ var scene = new ScrollMagic.Scene({
   })
   .addTo(controller);
 
-// 1975
+// Landing Element animations
+var tlSection = new TimelineLite();
+  tlSection.staggerFrom(".section-1963 .year span", .4, {
+    opacity:0,
+    top: 200,
+    ease:Power3.easeOut}, 0.15)
 
+  .from(".section-1963 .fact", .4, {
+    opacity:0,
+    x:-200,
+    ease:Back.easeOut})
+
+  .staggerFrom(".section-1963 .tagline span", .6, {
+    opacity:0,
+    x:200,
+    ease:Power4.easeOut}, 0.2)
+
+var scene = new ScrollMagic.Scene({
+  triggerElement: ".section-1963",
+})
+ .setTween(tlSection)
+
+ .addTo(controller)
+
+
+
+// 1975
+// parallax
 var scene = new ScrollMagic.Scene({
   triggerElement: ".section-1975",
   triggerHook: "onEnter",
@@ -272,7 +439,33 @@ var scene = new ScrollMagic.Scene({
   })
   .addTo(controller);
 
+// Landing Element animations
+var tlSection = new TimelineLite();
+  tlSection.staggerFrom(".section-1975 .year span", .4, {
+    opacity:0,
+    top: 200,
+    ease:Power3.easeOut}, 0.15)
+
+  .from(".section-1975 .fact", .4, {
+    opacity:0,
+    x:-200,
+    ease:Back.easeOut})
+
+  .staggerFrom(".section-1975 .tagline span", .6, {
+    opacity:0,
+    x:200,
+    ease:Power4.easeOut}, 0.2)
+
+var scene = new ScrollMagic.Scene({
+  triggerElement: ".section-1975",
+})
+ .setTween(tlSection)
+
+ .addTo(controller)
+
+
 // 1987
+// parallax
 var scene = new ScrollMagic.Scene({
   triggerElement: ".section-1987",
   triggerHook: "onEnter",
@@ -294,6 +487,32 @@ var scene = new ScrollMagic.Scene({
     ease: Linear.easeNone
   })
   .addTo(controller);
+
+// Landing Element animations
+var tlSection = new TimelineLite();
+  tlSection.staggerFrom(".section-1987 .year span", .4, {
+    opacity:0,
+    top: 200,
+    ease:Power3.easeOut}, 0.15)
+
+  .from(".section-1987 .fact", .4, {
+    opacity:0,
+    x:-200,
+    ease:Back.easeOut})
+
+  .staggerFrom(".section-1987 .tagline span", .6, {
+    opacity:0,
+    x:200,
+    ease:Power4.easeOut}, 0.2)
+
+var scene = new ScrollMagic.Scene({
+  triggerElement: ".section-1987",
+})
+ .setTween(tlSection)
+
+ .addTo(controller)
+
+
 
   // Form animations
 
