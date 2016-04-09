@@ -1,40 +1,70 @@
 section
   position: relative
+  background: white
   color: white
   overflow: hidden
-  margin-bottom: 25px
+  margin-bottom: 2.5rem
 
 .section-content
   position: relative
-  margin: 5px 25px 0px 25px
+  margin: 0 2rem
+  @media (max-width: 350px)
+    margin: 0 1.6rem
 
 .year
   position: absolute
-  h3
+  h4
     margin: 0
     padding: 0
     font:
-      family: 'League Spartan'
-      size: 150px
+      family: 'League Spartan', sans-serif
+      size: 9rem
+    @media (min-width: 700px)
+      font-size: 12rem
+
+    span
+      position: relative
+
 
 .fact
   position: absolute
+  width: 21.5rem
+  top: 6.2em
+  @media (min-width: 700px)
+    top: 9em
   p
     font:
-      size: 26px
+      size: 1.6rem
       family: futura-lt-bold, helvetica, sans-serif
       style: oblique
       weight: normal
 
 
 
+
+
 .tagline
+  position: absolute
   text-transform: uppercase
   color: white
+  bottom: 1rem
+  right: 1rem
 
   h2
+    display: inline-block
     font:
       family: futura-lt-bold, Futura, helvetica, sans-serif
-      size: 36px
+      size: 2rem
       weight: normal
       style: oblique
+    line-height: 1.2em
+    @media (min-width: 700px)
+      font-size: 3rem
+      @media (min-width: 900px)
+        font-size: 4rem
+
+
+    span
+      margin-bottom: .15em
+      display: inline-block
+      padding: 0 .5em

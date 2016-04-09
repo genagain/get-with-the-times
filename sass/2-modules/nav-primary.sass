@@ -1,0 +1,66 @@
+nav.nav-primary
+  position: fixed
+  height: 80px
+  width: 100%
+  z-index: 100
+  +transition
+  // transition-delay: 300ms
+  @media (max-width: 450px)
+    height: 60px
+    @media (max-width: 350px)
+      height: 60px
+
+  .container
+    position: relative
+
+    .logo
+      +position(absolute, 50% null null 2rem)
+      +transform(translateY(-50%))
+      +transition
+      @media (max-width: 450px)
+        font-size: .7rem
+        @media (max-width: 350px)
+          font-size: .6rem
+          width: 24em
+
+    .cta-secondary
+      display: none
+      +position(absolute, 50% 2rem null null)
+      +transform(translateY(-50%))
+      +transition
+      @media (max-width: 450px)
+        font-size: 1rem
+        @media (max-width: 350px)
+          right: 1.6rem
+          font-size: .8rem
+
+
+
+/* When window scrolls more than 2 pixels */
+
+nav.nav-primary.is-sticky
+  height: 80px
+  background: transparentize(white, .03)
+  box-shadow: 0 0 3px 0px transparentize(black, .3)
+  @media (max-width: 450px)
+    height: 60px
+
+
+/* When window scrolls past header */
+
+nav.nav-primary.is-sticky.is-scrolled
+  height: 60px
+  // transition-delay: 280ms
+
+  .logo
+    left: 2rem
+    transform: translate(0, -50%)
+    font-size: .8rem
+    @media (max-width: 450px)
+      font-size: .7rem
+      @media (max-width: 350px)
+        font-size: .6rem
+        width: 24em
+
+  .cta-secondary
+    display: block
