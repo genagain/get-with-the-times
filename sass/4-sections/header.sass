@@ -2,9 +2,12 @@
 
 header
   height: 500px
-  margin-bottom: 2rem
+  margin-bottom: 2.5rem
   position: relative
+  width: 100%
   overflow: hidden
+  @media (max-width: 515px)
+    height: 540px
 
   video
     +position(absolute, 50% null null 50%)
@@ -28,24 +31,10 @@ header
     z-index: 50
 
     h2.headline
-      font:
-        family: $futura-lt
-        weight: normal
-        style: oblique
-        size: 4.4rem
       margin-bottom: .7em
-      @media (max-width: 450px)
-        font-size: 3.8rem
 
     h3.headline-cta
-      font:
-        family: $futura-lt
-        weight: normal
-        style: oblique
-        size: 2.4rem
       margin-bottom: 1.4em
-      @media (max-width: 450px)
-        font-size: 2rem
 
     span
       font:

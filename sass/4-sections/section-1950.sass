@@ -1,63 +1,77 @@
 section.section-1950
 
   .section-content
-    height: 620px
+    height: 45rem
+    @media (min-width: 700px)
+      height: 60rem
 
     .year
-      top: -15px
-      right: -8px
-      z-index: 10
+      top: -1.1rem
+      right: -.5rem
 
     .fact
-      right: 10px
-      top: 120px
-      width: 330px
+      width: 19.3rem
+      right: 1em
+      @media (min-width: 700px)
+        width: 26rem
+        right: 1.3em
 
     .bg
-      width: 480px
-      height: 600px
+      width: 26rem
+      height: 30rem
       background:
         image: url(../img/bg-1950.jpg)
         size: cover
       border: 7px solid white
       position: absolute
-      bottom: 80px
-      left: 25px
+      bottom: -1rem
+      right: 50%
+      margin-right: -13rem
+      @media (min-width: 350px)
+        width: 30rem
+        left: 1rem
+        margin-right: 0
+        @media (min-width: 700px)
+          width: 42rem
+          height: 45rem
+          @media (min-width: 900px)
+            left: 3rem
+            width: 50rem
+            height: 60rem
+
 
     .figure
-      width: 600px
-      height: 600px
+      width: 36rem
+      height: 32rem
       background:
         image: url(../img/figure-1950.png)
         size: contain
         repeat: no-repeat
       position: absolute
-      bottom: 330px
-      left: -2px
+      bottom: 0rem
+      left: 0
+      @media (min-width: 700px)
+        right: 1rem
+        width: 45rem
+        height: 85rem
+        @media (min-width: 900px)
+          width: 50rem
+          height: 110rem
 
     .tagline
-      display: none
-      position: absolute
-      bottom: 30%
-      left: 10%
-      width: 420px
+      width: 23rem
+      @media (min-width: 700px)
+        width: 35rem
+        @media (min-width: 900px)
+          width: 46rem
+          height: 5rem
+          right: 10rem
+          bottom: null
+          top: 50%
+          transform: translateY(-50%)
 
-      h2
-        line-height: 1.2
+          h2
+            font-size: 4rem
 
-        span.line1
-          display: inline-block
-          margin-bottom: 5px
-          padding: 0 10px 0 20px
-
-        span.line2
-          display: inline-block
-          margin-bottom: 5px
-          margin-left: 215px
-          padding: 0 10px 0 10px
-
-
-        span.line3
-          display: inline-block
-          margin-left: 190px
-          padding: 0 8px 0 8px
+      span.line2
+        margin-left: 5em

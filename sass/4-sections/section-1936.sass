@@ -1,52 +1,87 @@
 section.section-1936
 
+
   .section-content
-    height: 550px
+    height: 35rem
+    @media (min-width: 700px)
+      height: 42rem
+      @media (min-width: 900px)
+        height: 55rem
 
     .year
-      bottom: -55px
-      right: -10px
-      z-index: 10
+      top: -1.1rem
+      right: .5rem
+
+    .fact
+      right: 1em
+      width: 15.5rem
+      @media (min-width: 700px)
+        right: -1rem
+        width: 22.8rem
+
 
     .bg
-      width: 720px
-      height: 550px
+      width: 26rem
+      height: 20rem
       background:
         image: url(../img/bg-1936.jpg)
         size: cover
       border: 7px solid white
       position: absolute
-      bottom: 0px
-      left: 25px
+      bottom: -1rem
+      left: 50%
+      margin-left: -13rem
+      @media (min-width: 350px)
+        width: 30rem
+        left: 1rem
+        margin-left: 0
+        @media (min-width: 700px)
+          width: 42rem
+          height: 32rem
+          @media (min-width: 900px)
+            left: 3rem
+            width: 75rem
+            height: 44rem
 
     .figure
-      width: 780px
-      height: 600px
+      width: 38rem
+      height: 22rem
       background:
         image: url(../img/figure-1936.png)
         size: contain
         repeat: no-repeat
       position: absolute
-      bottom: 90px
-      left: 10px
-
+      bottom: 0rem
+      left: 50%
+      margin-left: -19rem
+      @media (min-width: 350px)
+        width: 42rem
+        height: 26rem
+        left: -3rem
+        margin-left: 0
+        @media (min-width: 700px)
+          left: -13rem
+          width: 60rem
+          height: 40rem
+          @media (min-width: 900px)
+            left: 1rem
+            width: 80rem
+            height: 56rem
 
     .tagline
-      position: absolute
-      bottom: 0px
-      left: 20px
-      width: 500px
-
-      h2
-        line-height: 1.2
-
-        span.line1
-          display: inline-block
-          margin-bottom: 5px
-          padding: 0 10px 0 20px
-
-        span.line2
-          display: inline-block
-          margin-bottom: 5px
-          margin-left: 20px
-          padding: 0 10px 0 10px
+      height: 4.5rem
+      width: 40rem
+      left: 3em
+      bottom: 1.3em
+      span.line2
+        margin-left: .2em
+      @media (min-width: 700px)
+        width: 41rem
+        bottom: 5em
+        right: 3em
+        @media (min-width: 900px)
+          width: 54rem
+          height: 5em
+          left: auto
+          right: 5eem
+          bottom: 20em

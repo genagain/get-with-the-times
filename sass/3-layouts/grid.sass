@@ -1,13 +1,24 @@
 .container
+  position: relative
   margin: 0 auto
-  max-width: 96rem
-  padding: 0 2rem
+  max-width: 120rem
   height: 100%
+  padding: 0 2rem
+  @media (max-width: 350px)
+    padding: 0 1.6rem
 
 .row
   width: 100%
   margin: 0 auto
+  +clearfix
   // background: transparentize(pink, .8)
+
+.col-6
+  width: 50%
+  float: left
+  +clearfix
+  @media (max-width: 515px)
+    width: 100%
 
 .text-align-center
   text-align: center

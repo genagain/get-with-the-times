@@ -2,50 +2,84 @@ section.section-1911
 
 
   .section-content
-    height: 500px
+    height: 35rem
+    @media (min-width: 700px)
+      height: 42rem
+      @media (min-width: 900px)
+        height: 55rem
 
     .year
-      top: -15px
-      right: 6px
+      top: -1.1rem
+      right: .5rem
+
+    .fact
+      right: 1em
+      width: 15.5rem
+      @media (min-width: 700px)
+        right: -1rem
+        width: 22.8rem
+
 
     .bg
-      width: 700px
-      height: 350px
+      width: 26rem
+      height: 17rem
       background:
         image: url(../img/bg-1911.jpg)
         size: cover
       border: 7px solid white
       position: absolute
-      bottom: 0
-      left: 25px
+      bottom: -1rem
+      left: 50%
+      margin-left: -13rem
+      @media (min-width: 350px)
+        width: 30rem
+        left: 1rem
+        margin-left: 0
+        @media (min-width: 700px)
+          width: 42rem
+          height: 26rem
+          @media (min-width: 900px)
+            left: 3rem
+            width: 60rem
+            height: 36rem
 
     .figure
-      width: 770px
-      height: 600px
+      width: 33rem
+      height: 18rem
       background:
         image: url(../img/figure-1911.png)
         size: contain
         repeat: no-repeat
       position: absolute
-      bottom: -100px
-      left: -10px
+      bottom: 0
+      left: 50%
+      margin-left: -17rem
+      @media (min-width: 350px)
+        width: 42rem
+        height: 21rem
+        left: -1rem
+        margin-left: 0
+        @media (min-width: 700px)
+          width: 50rem
+          height: 26rem
+          @media (min-width: 900px)
+            width: 74rem
+            height: 38rem
 
     .tagline
-      position: absolute
-      bottom: 20px
-      left: 90px
-      width: 420px
-
-      h2
-        line-height: 1.2
-
-        span.line1
-          display: inline-block
-          margin-bottom: 5px
-          padding: 0 10px 0 20px
-
-        span.line2
-          display: inline-block
-          margin-bottom: 5px
-          margin-left: 145px
-          padding: 0 10px 0 10px
+      height: 4.5rem
+      width: 20rem
+      left: 3em
+      bottom: 3em
+      span.line2
+        margin-left: 4em
+      @media (min-width: 700px)
+        width: 30rem
+        bottom: 5em
+        right: 3em
+        @media (min-width: 900px)
+          width: 46rem
+          height: 5em
+          left: auto
+          right: 5eem
+          bottom: 15em
