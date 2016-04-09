@@ -1,0 +1,60 @@
+// Landing page styles
+
+header
+  height: 500px
+  margin-bottom: 2rem
+  position: relative
+  overflow: hidden
+
+  video
+    +position(absolute, 50% null null 50%)
+    +transform(translate(-50%, -50%))
+    min-width: 110%
+    min-height: 100%
+    width: auto
+    height: auto
+
+
+  .bg-overlay
+    +position(absolute, 0 0 0 0)
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.5))
+    // background: rgba(0,0,0,0.5)
+
+  .container
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: center
+    z-index: 50
+
+    h2.headline
+      font:
+        family: $futura-lt
+        weight: normal
+        style: oblique
+        size: 4.4rem
+      margin-bottom: .7em
+      @media (max-width: 450px)
+        font-size: 3.8rem
+
+    h3.headline-cta
+      font:
+        family: $futura-lt
+        weight: normal
+        style: oblique
+        size: 2.4rem
+      margin-bottom: 1.4em
+      @media (max-width: 450px)
+        font-size: 2rem
+
+    span
+      font:
+        family: $futura-lt
+        weight: normal
+        style: oblique
+        size: 1.6rem
+      margin: 0 20px
+      @media (max-width: 515px)
+        display: block
+        text-align: center
+        margin: .7em 0
