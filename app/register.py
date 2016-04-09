@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request
 from flask.ext.sqlalchemy import SQLAlchemy
-
-#from .registration_form import RegistrationForm
+import ipdb
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://localhost/petition'
@@ -30,10 +29,10 @@ def index():
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
-#    form = RegistrationForm(request.form)
-    #if request.method == 'POST' and form.validate():
-      
-    return render_template('register.html', form=form)
+  if request.method == 'POST':
+    ipdb.set_trace()
+
+  return render_template('index.html') #Change to thank you page when user in db
 
 if __name__ == '__main__':
     app.run(debug=True)
