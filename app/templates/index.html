@@ -18,8 +18,8 @@
     </nav>
     <header class="bg-blue">
       <video poster="null" autoplay loop>
-        <source src="assets/img/home-video.mp4" type="video/mp4">
-        <source src="assets/img/home-video.webm" type="video/webm">
+        <source src="../static/img/home-video.mp4" type="video/mp4">
+        <source src="../static/img/home-video.webm" type="video/webm">
       </video>
       <div class="bg-overlay"></div>
       <div class="container color-white">
@@ -37,31 +37,37 @@
     <section class="section-1909">
       <div class="section-content bg-orange">
         <div class="year">
-          <h3><span>1</span><span>9</span><span>0</span><span>9</span></h3>
+          <h4><span>1</span><span>9</span><span>0</span><span>9</span></h4>
+        </div>
+        <div class="fact">
+          <p>Norway passes legislation for paid leave.</p>
         </div>
         <div class="bg shadow-lg"></div>
         <div class="figure"></div>
         <div class="tagline">
-          <h2><span class="line1 bg-blue shadow-lg">Paid family leave</span><span class="line2 bg-blue shadow-lg">is long overdue,</span><span class="line3 bg-blue shadow-lg">America.</span></h2>
+          <h2><span class="line1 bg-blue">Paid family leave</span><span class="line2 bg-blue">is long overdue,</span><span class="line3 bg-blue">America.</span></h2>
         </div>
       </div>
     </section>
     <section class="section-1911">
       <div class="section-content bg-pink">
         <div class="year">
-          <h3><span>1</span><span>9</span><span>1</span><span>1</span></h3>
+          <h4><span>1</span><span>9</span><span>1</span><span>1</span></h4>
+        </div>
+        <div class="fact">
+          <p>Germany signs paid family leave into legislation.</p>
         </div>
         <div class="bg shadow-lg"></div>
         <div class="figure"></div>
         <div class="tagline">
-          <h2><span class="line1 bg-yellow shadow-lg">It's about time,</span><span class="line2 bg-yellow shadow-lg">America.</span></h2>
+          <h2><span class="line1 bg-yellow">It's about time,</span><span class="line2 bg-yellow">America.</span></h2>
         </div>
       </div>
     </section>
     <section class="section-1925">
       <div class="section-content bg-blue">
         <div class="year">
-          <h3><span>1</span><span>9</span><span>2</span><span>5</span></h3>
+          <h4><span>1</span><span>9</span><span>2</span><span>5</span></h4>
         </div>
         <div class="bg shadow-lg"></div>
         <div class="figure"></div>
@@ -73,7 +79,7 @@
     <section class="section-1936">
       <div class="section-content bg-yellow">
         <div class="year">
-          <h3><span>1</span><span>9</span><span>3</span><span>6</span></h3>
+          <h4><span>1</span><span>9</span><span>3</span><span>6</span></h4>
         </div>
         <div class="bg shadow-lg"></div>
         <div class="figure"></div>
@@ -85,7 +91,7 @@
     <section class="section-1945">
       <div class="section-content bg-orange">
         <div class="year">
-          <h3><span>1</span><span>9</span><span>4</span><span>5</span></h3>
+          <h4><span>1</span><span>9</span><span>4</span><span>5</span></h4>
         </div>
         <div class="bg shadow-lg"></div>
         <div class="figure"></div>
@@ -94,7 +100,7 @@
     <section class="section-1950">
       <div class="section-content bg-pink">
         <div class="year">
-          <h3><span>1</span><span>9</span><span>5</span><span>0</span></h3>
+          <h4><span>1</span><span>9</span><span>5</span><span>0</span></h4>
         </div>
         <div class="fact">
           <p>Italy signs <strong>paid</strong> parental leave into law.</p>
@@ -109,7 +115,7 @@
     <section class="section-1963">
       <div class="section-content bg-blue">
         <div class="year">
-          <h3><span>1</span><span>9</span><span>6</span><span>3</span></h3>
+          <h4><span>1</span><span>9</span><span>6</span><span>3</span></h4>
         </div>
         <div class="bg shadow-lg"></div>
         <div class="figure"></div>
@@ -121,7 +127,7 @@
     <section class="section-1975">
       <div class="section-content bg-yellow">
         <div class="year">
-          <h3><span>1</span><span>9</span><span>7</span><span>5</span></h3>
+          <h4><span>1</span><span>9</span><span>7</span><span>5</span></h4>
         </div>
         <div class="bg shadow-lg"></div>
         <div class="figure"></div>
@@ -133,7 +139,7 @@
     <section class="section-1987">
       <div class="section-content bg-orange">
         <div class="year">
-          <h3><span>1</span><span>9</span><span>8</span><span>7</span></h3>
+          <h4><span>1</span><span>9</span><span>8</span><span>7</span></h4>
         </div>
         <div class="bg shadow-lg"></div>
         <div class="figure"></div>
@@ -141,38 +147,38 @@
     </section>
     <footer class="site-footer">
       <div class="lockup">
-        <div class="footer-content__container">
-          <div class="row-wide">
-            <h2 class="cta">sign the petition to support the FAMILY act.</h2>
+        <div class="container">
+          <div class="row">
+            <h3 class="headline-cta">sign the petition to support the FAMILY act.</h3>
           </div>
-          <form class="awesome-form row-wide">
+          <form method="post" action="/register" class="awesome-form row">
             <div class="input-group">
-              <input type="text">
+              <input type="text" name="firstName">
               <label>your first name</label>
             </div>
             <div class="input-group">
-              <input type="text">
+              <input type="text" name="lastName">
               <label>your last name</label>
             </div>
             <div class="input-group">
-              <input type="email">
+              <input type="email" name="emailAddress">
               <label>your email address</label>
             </div>
             <div class="input-group">
-              <input type="text">
+              <input type="text" name="zipCode">
               <label>your zip code</label>
             </div>
+            <div class="row">   
+              <input type="submit">
+            </div>
           </form>
-          <div class="row-wide">   
-            <input type="submit" class="cta">
-          </div>
-          <div class="row-wide">
-            <div class="col-2">
+          <div class="row">
+            <div class="col-6">
               <div class="logo">
                 <h1><span class="get bg-orange">Get With The Times,</span><span class="america bg-orange">America.</span></h1>
               </div>
             </div>
-            <div class="col-2">
+            <div class="col-6">
               <div class="copyright">
                 <p>© 2016 Get With The Times</p>
               </div>
@@ -181,7 +187,11 @@
         </div>
       </div>
     </footer>
-    <script src="../static/js/jquery-2.2.1.min.js"></script>
+    <script src="../static/js/plugins/jquery-2.2.1.min.js"></script>
+    <script src="../static/js/plugins/TweenMax.js"></script>
+    <script src="../static/js/plugins/ScrollMagic.js"></script>
+    <script src="../static/js/plugins/animation.gsap.js"></script>
+    <script src="../static/js/plugins/debug.addIndicators.js"></script>
     <script src="../static/js/functions.js"></script>
   </body>
 </html>
