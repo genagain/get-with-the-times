@@ -2,7 +2,6 @@ from flask import Flask, render_template, request
 from flask.ext.sqlalchemy import SQLAlchemy
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-import ipdb
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://localhost/petition'
@@ -40,7 +39,6 @@ def register():
     db.session.add(supporter)
     db.session.commit()
     return render_template('index.html') #Change to thank you page when user in db
-
 
 if __name__ == '__main__':
     app.run(debug=True)
