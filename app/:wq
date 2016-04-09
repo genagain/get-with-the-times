@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 from flask.ext.sqlalchemy import SQLAlchemy
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-import ipdb
+#import ipdb
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://localhost/petition'
@@ -32,15 +32,13 @@ def index():
 @app.route('/register', methods=['GET', 'POST'])
 def register():
   if request.method == 'POST':
+    ipdb.set_trace()
     first_name = request.form['firstName']
     last_name = request.form['lastName']
-    email = request.form['emailAddress']
+    email = request.form['email']
     zip_code = request.form['zipCode']
-    supporter = Supporter(first_name, last_name, email, zip_code)
-    db.session.add(supporter)
-    db.session.commit()
-    return render_template('index.html') #Change to thank you page when user in db
 
+  return render_template('index.html') #Change to thank you page when user in db
 
 if __name__ == '__main__':
     app.run(debug=True)
