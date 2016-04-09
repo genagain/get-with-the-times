@@ -17,7 +17,7 @@ gulp.task('jade', function() {
       pretty: true
     }))
 
-    .pipe(gulp.dest('./'))
+    .pipe(gulp.dest('app/templates'))
     .pipe(browserSync.reload({stream: true}));
 });
 
@@ -28,7 +28,7 @@ gulp.task('sass', function () {
   return gulp.src('./sass/main.sass')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
-    .pipe(gulp.dest('./assets/css'))
+    .pipe(gulp.dest('./app/static/css'))
     .pipe(browserSync.reload({stream: true}));
 });
 
@@ -40,14 +40,16 @@ gulp.task('sass', function () {
 gulp.task('serve', function() {
 
   browserSync.init({
+    // baseDir is location of index.html
     server: {
-      baseDir: './'
+      baseDir: 'app',
+      index: 'templates/index.html'
     }
   });
 
   gulp.watch('./**/*.jade', ['jade']),
   gulp.watch('./sass/**/*.sass', ['sass']);
-  gulp.watch('./*.html').on('change', browserSync.reload)
+  gulp.watch('./app/**/*.html').on('change', browserSync.reload)
 });
 
 gulp.task('default', ['jade', 'sass', 'serve']);
