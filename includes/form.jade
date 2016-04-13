@@ -1,16 +1,20 @@
 form.awesome-form.row#petition(method="post" action="/register")
   .input-group
-    input(type="text" name="firstName")
+    input(type="text" name="firstName" id="first")
     label your first name
+    span.error-message#firstname_error-message
   .input-group
-    input(type="text" name="lastName")
+    input(type="text" name="lastName" id="last")
     label your last name
+    span.error-message#lastname_error-message
   .input-group
-    input(type="email" name="emailAddress")
+    input(type="email" name="emailAddress" id="email")
     label your email address
+    span.error-message#email_error-message
   .input-group
-    input(type="text" name="zipCode")
+    input(type="text" name="zipCode" id="zip")
     label your zip code
+    span.error-message#zip_error-message
 
   .row    
     input(type="submit")

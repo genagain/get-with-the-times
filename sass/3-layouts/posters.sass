@@ -3,7 +3,7 @@ section
   background: white
   color: white
   overflow: hidden
-  margin-bottom: 2.5rem
+  margin-top: 2.5rem
 
 .section-content
   position: relative
@@ -21,6 +21,8 @@ section
       size: 9rem
     @media (min-width: 700px)
       font-size: 12rem
+      @media (min-width: 1200px)
+        font-size: 18rem
 
     span
       position: relative
@@ -32,12 +34,20 @@ section
   top: 6.2em
   @media (min-width: 700px)
     top: 9em
+    @media (min-width: 1200px)
+      top: 15rem
+
   p
     font:
-      size: 1.6rem
+      size: 1.4rem
       family: futura-lt-bold, helvetica, sans-serif
       style: oblique
       weight: normal
+    line-height: 1.3em
+    @media (min-width: 515px)
+      font-size: 1.6rem
+      @media (min-width: 1200px)
+        font-size: 2rem
 
 
 
@@ -68,3 +78,6 @@ section
       margin-bottom: .15em
       display: inline-block
       padding: 0 .5em
+
+.flickity-page-dots
+  bottom: 3.5rem

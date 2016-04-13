@@ -1,0 +1,42 @@
+section.section-2016-2.gallery-cell
+  background: $blue
+  margin-top: 0
+  width: 100%
+
+  .section-content
+    margin-top: 2.5rem
+    margin-bottom: 2.5rem
+    height: 45rem
+    color: $blue
+    @media (min-width: 900px)
+      height: 60rem
+
+    .year
+      top: -1.1rem
+      right: -.5rem
+      z-index: 1
+
+    .fact
+      background: transparentize(white, .2)
+      padding: 0 2.2rem
+      top: 9rem
+      right: 0rem
+      width: 24rem
+      z-index: 1
+      @media (min-width: 700px)
+        width: 32rem
+        top: 11rem
+        @media (min-width: 1200px)
+          top: 17rem
+
+    .bg
+      position: absolute
+      left: 1rem
+      bottom: 1rem
+      width: 90%
+      height: 90%
+      background:
+        image: url(../img/usa.svg)
+        size: contain
+        repeat: no-repeat
+        position: bottom left

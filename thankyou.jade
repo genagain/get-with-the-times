@@ -1,0 +1,69 @@
+doctype html
+html
+  head
+    meta(name='apple-mobile-web-app-capable', content='yes')
+    meta(content='text/html', charset='utf-8', http-equiv='Content-Type')
+    meta(name='viewport', content='width=device-width', initial-scale='1')
+    
+    title Get With The Times
+    
+    link(rel='stylesheet', href='../static/css/main.css')
+    
+  body
+  
+    include includes/nav-primary
+    
+    include includes/nav-secondary
+    
+    include includes/header-thankyou
+    
+    //- 1909
+    include includes/section-1909
+    
+    //- 1911
+    include includes/section-1911
+    //- 
+    //- 1925
+    include includes/section-1925
+    
+    //- 1936
+    include includes/section-1936
+    
+    //- 1945
+    include includes/section-1945
+    
+    //- 1950
+    include includes/section-1950
+    
+    //- 1963
+    include includes/section-1963
+    
+    //- 1975
+    include includes/section-1975
+    
+    //- 1987
+    include includes/section-1987
+    
+    //- 2016
+    
+    .gallery.js-flickity#in2016(data-flickity-options='{ "wrapAround": true, "prevNextButtons": false }')
+      
+      include includes/section-2016-1
+    
+      include includes/section-2016-2
+    
+      include includes/section-2016-3
+  
+    //- div(style="height: 1000px;")
+    
+    //- Site Footer with Petition Form
+    include includes/footer.jade
+
+    script(src="../static/js/plugins/jquery-2.2.1.min.js")
+    script(src="../static/js/plugins/TweenMax.js")
+    script(src="../static/js/plugins/ScrollMagic.js")
+    script(src="../static/js/plugins/animation.gsap.js")
+    script(src="../static/js/plugins/debug.addIndicators.js")
+    script(src="../static/js/plugins/flickity.pkgd.min.js")
+    script(src="../static/js/plugins/ScrollToPlugin.min.js")
+    script(src="../static/js/functions.js")

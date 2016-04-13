@@ -10,7 +10,10 @@ html
     link(rel='stylesheet', href='../static/css/main.css')
     
   body
+  
     include includes/nav-primary
+    
+    include includes/nav-secondary
     
     include includes/header
     
@@ -40,6 +43,16 @@ html
     
     //- 1987
     include includes/section-1987
+    
+    //- 2016
+    
+    .gallery.js-flickity#in2016(data-flickity-options='{ "wrapAround": true, "prevNextButtons": false }')
+      
+      include includes/section-2016-1
+    
+      include includes/section-2016-2
+    
+      include includes/section-2016-3
   
     //- div(style="height: 1000px;")
     
@@ -51,4 +64,6 @@ html
     script(src="../static/js/plugins/ScrollMagic.js")
     script(src="../static/js/plugins/animation.gsap.js")
     script(src="../static/js/plugins/debug.addIndicators.js")
+    script(src="../static/js/plugins/flickity.pkgd.min.js")
+    script(src="../static/js/plugins/ScrollToPlugin.min.js")
     script(src="../static/js/functions.js")
