@@ -1,0 +1,46 @@
+section.section-2016-3.gallery-cell
+  background: $pink
+  margin-top: 0
+  width: 100%
+
+  .section-content
+    margin-top: 2.5rem
+    margin-bottom: 2.5rem
+    height: 45rem
+    color: $pink
+    @media (min-width: 900px)
+      height: 60rem
+
+    .year
+      top: -1.1rem
+      right: -.5rem
+
+
+    .fact
+      z-index: 2
+      background: transparentize(white, .2)
+      padding: 0 2.2rem
+      top: 9rem
+      right: 0rem
+      width: 24rem
+      @media (min-width: 700px)
+        width: 32rem
+        top: 11rem
+        @media (min-width: 1200px)
+          top: 17rem
+
+    .bg
+      position: absolute
+      left: 1rem
+      bottom: 1rem
+      width: 80%
+      height: 70%
+      background:
+        image: url(../img/piechart.svg)
+        size: contain
+        repeat: no-repeat
+        position: center
+      @media (min-width: 700px)
+        width: 55%
+        bottom: 50%
+        transform: translateY(50%)

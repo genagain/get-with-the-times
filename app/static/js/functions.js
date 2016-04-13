@@ -1,3 +1,49 @@
+// Auto-hide header
+
+;(function(document, window, index) {
+  'use strict';
+
+  var elSelector = 'nav.nav-primary',
+    element = document.querySelector(elSelector);
+
+  if (!element) return true;
+
+  var elHeight = 0,
+    elTop = 0,
+    dHeight = 0,
+    wHeight = 0,
+    wScrollCurrent = 0,
+    wScrollBefore = 0,
+    wScrollDiff = 0;
+
+  window.addEventListener('scroll', function() {
+    elHeight = element.offsetHeight;
+    dHeight = document.body.offsetHeight;
+    wHeight = window.innerHeight;
+    wScrollCurrent = window.pageYOffset;
+    wScrollDiff = wScrollBefore - wScrollCurrent;
+    elTop = parseInt(window.getComputedStyle(element).getPropertyValue('top')) + wScrollDiff;
+
+    if (wScrollCurrent <= 0)
+      element.style.top = '0px';
+
+    else if (wScrollDiff > 0)
+      element.style.top = (elTop > 0 ? 0 : elTop) + 'px';
+
+    else if (wScrollDiff < 0) {
+      if (wScrollCurrent + wHeight >= dHeight - elHeight)
+        element.style.top = ((elTop = wScrollCurrent + wHeight - dHeight) < 0 ? elTop : 0) + 'px';
+
+      else
+        element.style.top = (Math.abs(elTop) > elHeight ? -elHeight : elTop) + 'px';
+    }
+
+    wScrollBefore = wScrollCurrent;
+  });
+
+}(document, window, 0));
+
+
 $(document).ready(function() {
   // Variables
   var $window = $(window);
@@ -9,7 +55,6 @@ $(document).ready(function() {
 
       stickyNav(),
       vidPause();
-      // parallax();
 
   });
 
@@ -31,6 +76,13 @@ $(document).ready(function() {
         $('nav.nav-primary.is-sticky').removeClass('is-scrolled');
       }
 
+      if( wScroll > 50 ) {
+        $('nav.nav-secondary').addClass('is-scrolled');
+      } else {
+        $('nav.nav-secondary').removeClass('is-scrolled');
+      }
+
+
   }
 
 
@@ -42,6 +94,9 @@ $(document).ready(function() {
         $('video')[0].play();
       }
   }
+
+
+
 
 
 // Headline intro animation
@@ -60,7 +115,24 @@ tl.from("h2.headline", .6, {opacity:0, ease:Power4.easeOut, delay:.3})
 var controller = new ScrollMagic.Controller();
 
 
+// animate scroll to anchor links
+controller.scrollTo(function (newpos) {
+  TweenMax.to(window, 0.7, {scrollTo: {y: newpos}});
+});
 
+$(document).on("click", "a[href^='#']", function (e) {
+  var id = $(this).attr("href");
+  if ($(id).length > 0) {
+    e.preventDefault();
+
+    controller.scrollTo(id);
+
+    if (window.history && window.history.pushState) {
+      history.pushState("", document.title, id);
+    }
+  }
+
+});
 
 
 // 1909
@@ -91,20 +163,16 @@ var scene = new ScrollMagic.Scene({
 // Landing Element animations
 
 var tlSection = new TimelineLite();
-  tlSection.staggerFrom(".section-1909 .year span", .4, {
-    opacity:0,
-    top: 200,
-    ease:Power3.easeOut}, 0.15)
-
-  .from(".section-1909 .fact", .4, {
+  tlSection.from(".section-1909 .fact", .4, {
     opacity:0,
     x:-200,
-    ease:Back.easeOut})
+    ease:Back.easeOut,
+    delay: .3})
 
   .staggerFrom(".section-1909 .tagline span", .6, {
     opacity:0,
     x:200,
-    ease:Power4.easeOut}, 0.2)
+    ease:Power4.easeOut}, .2)
 
 var scene = new ScrollMagic.Scene({
   triggerElement: ".section-1909",
@@ -112,6 +180,9 @@ var scene = new ScrollMagic.Scene({
  .setTween(tlSection)
 
  .addTo(controller)
+
+
+
 
 
 
@@ -144,15 +215,11 @@ var scene = new ScrollMagic.Scene({
 
 // Landing Element animations
 var tlSection = new TimelineLite();
-  tlSection.staggerFrom(".section-1911 .year span", .4, {
-    opacity:0,
-    top: 200,
-    ease:Power3.easeOut}, 0.15)
-
-  .from(".section-1911 .fact", .4, {
+  tlSection.from(".section-1911 .fact", .4, {
     opacity:0,
     x:-200,
-    ease:Back.easeOut})
+    ease:Back.easeOut,
+    delay: .3})
 
   .staggerFrom(".section-1911 .tagline span", .6, {
     opacity:0,
@@ -193,15 +260,11 @@ var scene = new ScrollMagic.Scene({
 
 // Landing Element animations
 var tlSection = new TimelineLite();
-  tlSection.staggerFrom(".section-1925 .year span", .4, {
-    opacity:0,
-    top: 200,
-    ease:Power3.easeOut}, 0.15)
-
-  .from(".section-1925 .fact", .4, {
+  tlSection.from(".section-1925 .fact", .4, {
     opacity:0,
     x:-200,
-    ease:Back.easeOut})
+    ease:Back.easeOut,
+    delay: .3})
 
   .staggerFrom(".section-1925 .tagline span", .6, {
     opacity:0,
@@ -244,15 +307,11 @@ var scene = new ScrollMagic.Scene({
 // Landing Element animations
 
 var tlSection = new TimelineLite();
-  tlSection.staggerFrom(".section-1936 .year span", .4, {
-    opacity:0,
-    top: 200,
-    ease:Power3.easeOut}, 0.15)
-
-  .from(".section-1936 .fact", .4, {
+  tlSection.from(".section-1936 .fact", .4, {
     opacity:0,
     x:-200,
-    ease:Back.easeOut})
+    ease:Back.easeOut,
+    delay: .3})
 
   .staggerFrom(".section-1936 .tagline span", .6, {
     opacity:0,
@@ -294,15 +353,11 @@ var scene = new ScrollMagic.Scene({
 
 // Landing Element animations
 var tlSection = new TimelineLite();
-  tlSection.staggerFrom(".section-1945 .year span", .4, {
-    opacity:0,
-    top: 200,
-    ease:Power3.easeOut}, 0.15)
-
-  .from(".section-1945 .fact", .4, {
+  tlSection.from(".section-1945 .fact", .4, {
     opacity:0,
     x:-200,
-    ease:Back.easeOut})
+    ease:Back.easeOut,
+    delay: .3})
 
   .staggerFrom(".section-1945 .tagline span", .6, {
     opacity:0,
@@ -342,15 +397,11 @@ var scene = new ScrollMagic.Scene({
 
 // Landing Element animations
 var tlSection = new TimelineLite();
-  tlSection.staggerFrom(".section-1950 .year span", .4, {
-    opacity:0,
-    top: 200,
-    ease:Power3.easeOut}, 0.15)
-
-  .from(".section-1950 .fact", .4, {
+  tlSection.from(".section-1950 .fact", .4, {
     opacity:0,
     x:-200,
-    ease:Back.easeOut})
+    ease:Back.easeOut,
+    delay: .3})
 
   .staggerFrom(".section-1950 .tagline span", .6, {
     opacity:0,
@@ -391,15 +442,11 @@ var scene = new ScrollMagic.Scene({
 
 // Landing Element animations
 var tlSection = new TimelineLite();
-  tlSection.staggerFrom(".section-1963 .year span", .4, {
-    opacity:0,
-    top: 200,
-    ease:Power3.easeOut}, 0.15)
-
-  .from(".section-1963 .fact", .4, {
+  tlSection.from(".section-1963 .fact", .4, {
     opacity:0,
     x:-200,
-    ease:Back.easeOut})
+    ease:Back.easeOut,
+    delay: .3})
 
   .staggerFrom(".section-1963 .tagline span", .6, {
     opacity:0,
@@ -441,15 +488,11 @@ var scene = new ScrollMagic.Scene({
 
 // Landing Element animations
 var tlSection = new TimelineLite();
-  tlSection.staggerFrom(".section-1975 .year span", .4, {
-    opacity:0,
-    top: 200,
-    ease:Power3.easeOut}, 0.15)
-
-  .from(".section-1975 .fact", .4, {
+  tlSection.from(".section-1975 .fact", .4, {
     opacity:0,
     x:-200,
-    ease:Back.easeOut})
+    ease:Back.easeOut,
+    delay: .3})
 
   .staggerFrom(".section-1975 .tagline span", .6, {
     opacity:0,
@@ -490,15 +533,11 @@ var scene = new ScrollMagic.Scene({
 
 // Landing Element animations
 var tlSection = new TimelineLite();
-  tlSection.staggerFrom(".section-1987 .year span", .4, {
-    opacity:0,
-    top: 200,
-    ease:Power3.easeOut}, 0.15)
-
-  .from(".section-1987 .fact", .4, {
+  tlSection.from(".section-1987 .fact", .4, {
     opacity:0,
     x:-200,
-    ease:Back.easeOut})
+    ease:Back.easeOut,
+    delay: .3})
 
   .staggerFrom(".section-1987 .tagline span", .6, {
     opacity:0,
@@ -513,6 +552,114 @@ var scene = new ScrollMagic.Scene({
  .addTo(controller)
 
 
+  // Form Validation
+
+  $("#firstname_error-message").hide();
+  $("#lastname_error-message").hide();
+  $("#email_error-message").hide();
+  $("#zip_error-message").hide();
+
+  var error_firstname = false;
+  var error_lastname = false;
+  var error_email = false;
+  var error_zip = false;
+
+  $("#first").focusout(function() {
+
+    check_firstname();
+
+  });
+
+  $("#last").focusout(function() {
+
+    check_lastname();
+
+  });
+
+  $("#email").focusout(function() {
+
+    check_email();
+
+  });
+
+  $("#zip").focusout(function() {
+
+    check_zip();
+
+  });
+
+
+  function check_firstname() {
+
+    var firstname_length = $("#first").val().length;
+
+    if(firstname_length < 1) {
+      $("#firstname_error-message").html("Please enter your first name");
+      $("#firstname_error-message").show();
+      error_firstname = true;
+    } else {
+      $("#firstname_error-message").hide();
+    }
+  }
+
+  function check_lastname() {
+
+    var lastname_length = $("#last").val().length;
+
+    if(lastname_length < 1) {
+      $("#lastname_error-message").html("Please enter your last name");
+      $("#lastname_error-message").show();
+      error_lastname = true;
+    } else {
+      $("#lastname_error-message").hide();
+    }
+  }
+
+  function check_email() {
+
+    var email_pattern = new RegExp(/^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i)
+
+    if(email_pattern.test($("#email").val())) {
+      $("#email_error-message").hide();
+    } else {
+      $("#email_error-message").html("Please enter a valid email address");
+      $("#email_error-message").show();
+      error_email = true;
+    }
+  }
+
+  function check_zip() {
+
+    var zipcode_pattern = new RegExp(/^\d{5}(?:[\s-]\d{4})?$/)
+
+    if(zipcode_pattern.test($("#zip").val())) {
+      $("#zip_error-message").hide();
+    } else {
+      $("#zip_error-message").html("Please enter a valid US zip code");
+      $("#zip_error-message").show();
+      error_zip = true;
+    }
+  }
+
+  $("#petition").submit(function() {
+
+    error_firstname = false;
+    error_lastname = false;
+    error_email = false;
+    error_zip = false;
+
+    check_firstname();
+    check_lastname();
+    check_email();
+    check_zip();
+
+    if(error_firstname == false && error_lastname == false && error_email == false && error_zip == false) {
+      return true;
+    } else {
+      return false;
+    }
+
+  });
 
   // Form animations
 
@@ -531,6 +678,7 @@ var scene = new ScrollMagic.Scene({
     }
 
     });
+
 
 
 });

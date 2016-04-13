@@ -8,11 +8,20 @@ section.section-1909
     .year
       top: -1.1rem
       left: -.5rem
+      @media (min-width: 1200px)
+        top: -1.4rem
+        left: -1.3rem
 
     .fact
       left: 1em
-      @media (min-width: 700px)
-        left: 1.3em
+      width: 25rem
+      @media (min-width: 515px)
+        width: 30rem
+        @media (min-width: 700px)
+          left: 1.3em
+          @media (min-width: 1200px)
+            left: 1.7em
+            width: 36rem
 
     .bg
       width: 24rem
@@ -30,7 +39,7 @@ section.section-1909
         right: 1rem
         margin-right: 0
         @media (min-width: 700px)
-          width: 38rem
+          width: 34rem
           height: 29rem
           @media (min-width: 900px)
             right: 3rem
@@ -67,6 +76,9 @@ section.section-1909
           bottom: null
           top: 50%
           transform: translateY(-50%)
+          @media (min-width: 900px)
+            top: auto
+            bottom: 15rem
 
           h2
             font-size: 4rem

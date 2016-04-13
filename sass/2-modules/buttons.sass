@@ -8,14 +8,17 @@
   border: 3px solid $orange
   padding: .6em 2em
   outline: none
+  text-transform: lowercase
+  @media (max-width: 515px)
+    display: block
+    width: 100%
+    text-align: center
 
   &:hover
     background: $orange
     color: white
 
-@media (max-width: 515px)
-  .cta-primary
-    width: 100%
+
 
 .cta-secondary
   font:

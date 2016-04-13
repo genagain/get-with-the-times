@@ -1,0 +1,115 @@
+nav.nav-secondary
+  background: transparentize(white, .03)
+  box-shadow: 0 0 3px 0px transparentize(black, .7)
+  position: fixed
+  bottom: -32px
+  height: 32px
+  width: 100%
+  z-index: 100
+  +transition
+  // transition-delay: 300ms
+  @media (max-width: 450px)
+    display: none
+    height: 40px
+
+  .container
+    position: relative
+
+    .years
+      height: 32px
+      width: 100%
+      display: flex
+      flex-direction: row
+      justify-content: center
+      @media (max-width: 450px)
+        height: 40px
+
+      a
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 9%
+        height: 30px
+        outline: none
+        position: relative
+        color: #999
+        font-family: 'League Spartan'
+        font-size: 1.2rem
+        margin: 0
+        text-align: center
+        +transition
+        @media (max-width: 450px)
+          height: 40px
+          color: transparentize(white, 1)
+
+
+        &:nth-child(1):hover
+          color: $orange
+
+        &:nth-child(2):hover
+          color: $pink
+
+        &:nth-child(3):hover
+          color: $blue
+
+        &:nth-child(4):hover
+          color: $yellow
+
+        &:nth-child(5):hover
+          color: $orange
+
+        &:nth-child(6):hover
+          color: $pink
+
+        &:nth-child(7):hover
+          color: $blue
+
+        &:nth-child(8):hover
+          color: $yellow
+
+        &:nth-child(9):hover
+          color: $orange
+
+        &:nth-child(10):hover
+          color: $blue
+
+
+
+      .active1909
+        color: $orange
+
+      .active1911
+        color: $pink
+
+      .active1925
+        color: $blue
+
+      .active1936
+        color: $yellow
+
+      .active1945
+        color: $orange
+
+      .active1950
+        color: $pink
+
+      .active1963
+        color: $blue
+
+      .active1975
+        color: $yellow
+
+      .active1987
+        color: $orange
+
+      .active2016
+        color: $blue
+
+
+
+
+
+
+
+nav.nav-secondary.is-scrolled
+  bottom: 0px
