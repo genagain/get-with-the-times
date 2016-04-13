@@ -40,7 +40,7 @@ def register():
     supporter = Supporter(first_name, last_name, email, zip_code)
     db.session.add(supporter)
     db.session.commit()
-    return redirect('/thankyou', code=302) #Change to thank you page when user in db
+    return redirect('/thankyou', code=302)
 
 @app.route('/thankyou', methods=['GET'])
 def thank_you():
