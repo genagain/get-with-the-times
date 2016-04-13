@@ -1,10 +1,12 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 from flask.ext.sqlalchemy import SQLAlchemy
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+from flask.ext.heroku import Heroku
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://localhost/petition'
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://localhost/petition'
+heroku = Heroku(app)
 db = SQLAlchemy(app)
 
 class Supporter(db.Model):
@@ -38,7 +40,11 @@ def register():
     supporter = Supporter(first_name, last_name, email, zip_code)
     db.session.add(supporter)
     db.session.commit()
-    return render_template('index.html') #Change to thank you page when user in db
+    return redirect('/thankyou', code=302)
+
+@app.route('/thankyou', methods=['GET'])
+def thank_you():
+  return render_template('thankyou.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
