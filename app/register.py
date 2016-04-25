@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect
 from flask.ext.sqlalchemy import SQLAlchemy
 #from flask.ext.heroku import Heroku
+import ipdb
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://localhost/petition'
@@ -37,6 +38,7 @@ def register():
     email = request.form['emailAddress']
     zip_code = request.form['zipCode']
     supporter = Supporter(first_name, last_name, email, zip_code)
+    ipdb.set_trace()
     db.session.add(supporter)
     db.session.commit()
     return redirect('/thankyou', code=302)
