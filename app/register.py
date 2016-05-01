@@ -51,5 +51,5 @@ def thank_you():
   return render_template('thankyou.html')
 
 if __name__ == '__main__':
-    app.secret_key = 'superdooper'
+    app.secret_key = 'superdooperlooper'
     app.run(debug=True)
