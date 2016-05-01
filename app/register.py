@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, flash
 from flask.ext.sqlalchemy import SQLAlchemy
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -37,10 +37,14 @@ def register():
     last_name = request.form['lastName']
     email = request.form['emailAddress']
     zip_code = request.form['zipCode']
-    supporter = Supporter(first_name, last_name, email, zip_code)
-    db.session.add(supporter)
-    db.session.commit()
+    try:
+      supporter = Supporter(first_name, last_name, email, zip_code)
+      db.session.add(supporter)
+      db.session.commit()
+    except:
+      flash('Looks like you already signed the petition.')
     return redirect('/thankyou', code=302)
+
 
 @app.route('/thankyou', methods=['GET'])
 def thank_you():
