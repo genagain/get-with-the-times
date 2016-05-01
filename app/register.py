@@ -1,12 +1,14 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, flash
 from flask.ext.sqlalchemy import SQLAlchemy
-#from flask.ext.heroku import Heroku
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
+import psycopg2
 import ipdb
+#from flask.ext.heroku import Heroku
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://localhost/petition'
 #heroku = Heroku(app)
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 db = SQLAlchemy(app)
 
 class Supporter(db.Model):
@@ -37,15 +39,19 @@ def register():
     last_name = request.form['lastName']
     email = request.form['emailAddress']
     zip_code = request.form['zipCode']
-    supporter = Supporter(first_name, last_name, email, zip_code)
-    ipdb.set_trace()
-    db.session.add(supporter)
-    db.session.commit()
+    try:
+      supporter = Supporter(first_name, last_name, email, zip_code)
+      db.session.add(supporter)
+      db.session.commit()
+    except:
+      flash('Looks like you already signed the petition.')
     return redirect('/thankyou', code=302)
+
 
 @app.route('/thankyou', methods=['GET'])
 def thank_you():
   return render_template('thankyou.html')
 
 if __name__ == '__main__':
+    app.secret_key = 'sooperdooperscoopersecret'
     app.run(debug=True)
