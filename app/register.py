@@ -38,7 +38,6 @@ def register():
     last_name = request.form['lastName']
     email = request.form['emailAddress']
     zip_code = request.form['zipCode']
-    # ipdb.set_trace()
     try:
       supporter = Supporter(first_name, last_name, email, zip_code)
       db.session.add(supporter)
