@@ -3,6 +3,7 @@ from flask.ext.sqlalchemy import SQLAlchemy
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from flask.ext.heroku import Heroku
+import os
 
 app = Flask(__name__)
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://localhost/petition'
@@ -51,5 +52,5 @@ def thank_you():
   return render_template('thankyou.html')
 
 if __name__ == '__main__':
-    app.secret_key = 'superdooperlooper'
+    app.secret_key = os.environ['APP_SECRET']
     app.run(debug=True)

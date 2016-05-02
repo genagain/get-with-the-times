@@ -28,13 +28,15 @@
       </video>
       <div class="bg-overlay"></div>
       <div class="container color-white">
-        <div style="height: 80px" class="nav-ghost"></div>{% with messages = get_flashed_messages() %}
-        {% if messages %}
+        <div style="height: 80px" class="nav-ghost"></div>
         <div class="row">
-          <h2 class="headline">{{messages[0]}} Thank you for your support!</h2>
+          {% with messages = get_flashed_messages() %}
+          {% if messages %}
+          <h2 class="headline">{{messages[0]}} Thank you for your support!</h2>{% else %}
+          <h2 class="headline">Thank you for your support!</h2>{% endif %}
+          {% endwith %}
           <h3 class="headline-cta">Now spread the word</h3>
-        </div>{% endif %}
-        {% endwith %}
+        </div>
         <div class="row"><a href="https://www.facebook.com/sharer/sharer.php?u=getwiththetimes.us" class="cta-primary">share on facebook</a><span>and</span><a href="http://twitter.com/share?url=http%3A%2F%2Fgetwiththetimes.us&amp;text=Take%20a%20stand%20for%20working%20families.%20Support%20the%20FAMILY%20act!%20&amp;via=usa_paid_leave&amp;hashtags=getwiththetimesamerica" class="cta-primary">tweet  </a></div>
       </div>
     </header>

@@ -10,15 +10,15 @@ header.bg-blue
     
     .nav-ghost(style="height: 80px")
     
-    |{% with messages = get_flashed_messages() %}
-    |{% if messages %}
     .row
-    
+      |{% with messages = get_flashed_messages() %}
+      |{% if messages %}
       h2.headline {{messages[0]}} Thank you for your support!
+      |{% else %}
+      h2.headline Thank you for your support!
+      |{% endif %}
+      |{% endwith %}
       h3.headline-cta Now spread the word
-    |{% endif %}
-    |{% endwith %}
-      
       
     .row
     
