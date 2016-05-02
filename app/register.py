@@ -2,13 +2,12 @@ from flask import Flask, render_template, request, redirect, flash
 from flask.ext.sqlalchemy import SQLAlchemy
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-#from flask.ext.heroku import Heroku
+from flask.ext.heroku import Heroku
 import os
-import ipdb
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://localhost/petition'
-#heroku = Heroku(app)
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://localhost/petition'
+heroku = Heroku(app)
 db = SQLAlchemy(app)
 
 class Supporter(db.Model):
