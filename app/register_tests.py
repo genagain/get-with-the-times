@@ -1,4 +1,5 @@
 import unittest
+import os
 from register import app, db, Supporter
 
 class RegisterTestCase(unittest.TestCase):
@@ -6,6 +7,7 @@ class RegisterTestCase(unittest.TestCase):
   def setUp(self):
     app.config['TESTING'] = True
     app.config['DEBUG'] = True
+    app.secret_key = os.environ['APP_SECRET']
     db.session.close()
     db.drop_all()
     db.create_all()
