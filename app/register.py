@@ -44,7 +44,8 @@ def register():
       db.session.commit()
     except:
       flash('Looks like you already signed the petition.')
-    return redirect('/thankyou', code=302)
+    finally:
+      return redirect('/thankyou', code=302)
 
 
 @app.route('/thankyou', methods=['GET'])
