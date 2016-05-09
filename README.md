@@ -56,4 +56,4 @@ To run the super cool gulp task that I've created is really easy.
 
 A new browser preview window will open and you will see the beautiful Get With The Times homepage :)
 
-This app is available (here)[http://www.getwiththetimes.us/]
+This app is available [here](http://www.getwiththetimes.us/)

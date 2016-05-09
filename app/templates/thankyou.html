@@ -9,14 +9,14 @@
   </head>
   <body>
     <nav role="banner" class="nav-primary">
-      <div class="container"> 
+      <div class="container">
         <div class="logo">
           <h1><span class="get bg-orange">Get With the Times,</span><span class="america bg-orange">America.</span></h1>
         </div><a href="#petition" class="cta-secondary">sign the petition</a>
       </div>
     </nav>
     <nav class="nav-secondary">
-      <div class="container"> 
+      <div class="container">
         <div class="years"><a id="year1" href="#timeline">1909</a><a id="year2" href="#in1911">1911</a><a id="year3" href="#in1925">1925</a><a id="year4" href="#in1936">1936</a><a id="year5" href="#in1945">1945</a><a id="year6" href="#in1950">1950</a><a id="year7" href="#in1963">1963</a><a id="year8" href="#in1975">1975</a><a id="year9" href="#in1987">1987</a><a id="year10" href="#in2016">2016</a>
         </div>
       </div>
@@ -32,7 +32,7 @@
         <div class="row">
           {% with messages = get_flashed_messages() %}
           {% if messages %}
-          <h2 class="headline">{{messages[0]}} Thank you for your support!</h2>{% else %}
+          <h2 class="headline"><span class=flashes style="list-style-type: none;">{{messages[0]}}</span> Thank you for your support!</h2>{% else %}
           <h2 class="headline">Thank you for your support!</h2>{% endif %}
           {% endwith %}
           <h3 class="headline-cta">Now spread the word</h3>
@@ -224,7 +224,7 @@
               <input type="text" name="zipCode" id="zip">
               <label>your zip code</label><span id="zip_error-message" class="error-message"></span>
             </div>
-            <div class="row">   
+            <div class="row">
               <input type="submit">
             </div>
           </form>
