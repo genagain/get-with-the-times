@@ -2,11 +2,14 @@ language: python
 python:
   - "2.6"
   - "2.7"
-  - "3.2"
   - "3.3"
   - "3.4"
   - "3.5"
 install: "pip install -r requirements.txt"
+before_script:
+  - psql -c 'create database petition_test;' -U postgres
+services:
+  - postgresql
 script: python app/register_tests.py
 env:
   - APP_SECRET=sooperdoopersecret

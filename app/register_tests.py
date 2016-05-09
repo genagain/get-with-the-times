@@ -8,6 +8,7 @@ class RegisterTestCase(unittest.TestCase):
     app.config['TESTING'] = True
     app.config['DEBUG'] = True
     app.secret_key = os.environ['APP_SECRET']
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://localhost/petition_test'
     db.session.close()
     db.drop_all()
     db.create_all()
@@ -28,7 +29,7 @@ class RegisterTestCase(unittest.TestCase):
     email = 'bob.jones@gmail.com'
     zip_code = '02445'
     rv = self.register(first_name, last_name, email, zip_code)
-    assert "Thank you for your support!" in rv.data
+    assert "Thank you for your support!" in rv.data.decode('utf-8')
     lookup = Supporter.query.filter_by(email = 'bob.jones@gmail.com').all()
     bob = lookup[0]
     assert len(lookup) == 1
@@ -49,7 +50,7 @@ class RegisterTestCase(unittest.TestCase):
     rv = self.register(first_name, last_name, email, zip_code)
   #   import ipdb
   #   ipdb.set_trace()
-    assert "Looks like you already signed the petition." in rv.data
+    assert "Looks like you already signed the petition." in rv.data.decode('utf-8')
 
 if __name__ == '__main__':
   unittest.main()
