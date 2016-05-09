@@ -8,7 +8,7 @@ class RegisterTestCase(unittest.TestCase):
     app.config['TESTING'] = True
     app.config['DEBUG'] = True
     app.secret_key = os.environ['APP_SECRET']
-    #app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://localhost/petition_test'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://localhost/petition_test'
     db.session.close()
     db.drop_all()
     db.create_all()
